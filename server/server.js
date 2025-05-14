@@ -13,6 +13,9 @@ import './config/googleStrategy.js';
 const app = express();
 connectDB();
 
+// Critical Fixes for Production
+app.set('trust proxy', 1); // Add this for Render.com proxy
+
 // Middleware
 app.use(cors({
   origin: "https://booking-list3.vercel.app",
@@ -26,8 +29,10 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === 'production',
-    maxAge: 24 * 60 * 60 * 1000 // 1 day
+    secure: true, // Force HTTPS in production
+    httpOnly: true,
+    sameSite: 'none', // Required for cross-site cookies
+    maxAge: 24 * 60 * 60 * 1000
   }
 }));
 app.use(passport.initialize());
