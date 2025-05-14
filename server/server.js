@@ -15,7 +15,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: "https://booking-list3.vercel.app",
   credentials: true
 }));
 app.use(morgan('dev'));
