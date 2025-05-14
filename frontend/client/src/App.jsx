@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 
 axios.defaults.withCredentials = true; // send cookies with requests
 
-const API ='http://localhost:5000';
+const API ='https://booking-list3.onrender.com';
 
 function App() {
   const [user, setUser] = useState(null);

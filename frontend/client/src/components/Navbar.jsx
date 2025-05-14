@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API ='http://localhost:5000';
+const API ='https://booking-list3.onrender.com';
 
 function Navbar({ user, setUser }) {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API ='http://localhost:5000';
+const API ='https://booking-list3.onrender.com';
 
 const initialState = { name: '', address: '', pin: '', phone: '' };
 

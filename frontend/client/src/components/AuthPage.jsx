@@ -1,6 +1,6 @@
 import React from 'react';
 
-const API ='http://localhost:5000';
+const API ='https://booking-list3.onrender.com';
 
 function AuthPage() {
   const handleGoogleLogin = () => {
