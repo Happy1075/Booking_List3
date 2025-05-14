@@ -7,7 +7,7 @@ import AdminDashboard from './components/AdminDashboard';
 import GuestView from './components/GuestView';
 import Navbar from './components/Navbar';
 
-axios.defaults.withCredentials = true; // send cookies with requests
+axios.defaults.withCredentials = true; 
 
 const API ='https://booking-list3.onrender.com';
 
